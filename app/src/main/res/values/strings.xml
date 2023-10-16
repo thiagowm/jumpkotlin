@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">JumpTest</string>
+
+    <string name="email">E-mail</string>
+    <string name="password">Senha</string>
+    <string name="btn_enter">ENTRAR</string>
+
+    <string name="msg_exit_app">Deseja realmente sair do Aplicativo?</string>
+    <string name="error_out_app">Erro ao sair do aplicativo.</string>
+    <string name="msg_exit_vehicle">Deseja realmente fazer a saída deste veículo?</string>
+    <string name="msg_confirm_out_vehicle">Saída de veículo finalizada com sucesso.</string>
+    <string name="enter_email">Digite um e-mail.</string>
+    <string name="enter_password">Digite uma senha.</string>
+
+
+    <string name="parking_management">Gestão Estacionamento</string>
+    <string name="total_vehicle">Total Veículos Pátio</string>
+    <string name="payment_methods">Formas de Pagamento</string>
+    <string name="payment_money">Dinheiro</string>
+    <string name="payment_credit">Crédito</string>
+    <string name="payment_debit">Débito</string>
+    <string name="payment_ticket">Boleto</string>
+    <string name="payment_pix">Pix</string>
+    <string name="total">Total R$</string>
+    <string name="btn_vehicle_enter">ENTRADA DE VEÍCULOS</string>
+    <string name="btn_vehicle_out">FAZER SAÍDA</string>
+
+    <string name="list_vehicles">Lista de Veículos</string>
+    <string name="out_vehicles">Saída de Veículos</string>
+    <string name="details_vehicles">Detalhes Veículos</string>
+    <string name="vehicle_enter">Entrada de Veículos</string>
+    <string name="exit">Sair</string>
+
+    <string name="plate">Placa</string>
+    <string name="model">Modelo</string>
+    <string name="color">Cor</string>
+    <string name="table_parking">Tabela Estacionamento</string>
+    <string name="make_entry">FAZER ENTRADA</string>
+
+    <string name="error_login">Verifique usuário e senha. Ou sua conta esta conectada em outro aparelho.</string>
+    <string name="internal_error">Erro interno.</string>
+    <string name="error_manual">Erro ao fazer busca do manual de estacionamento</string>
+</resources>

@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ManagementActvity">
+
+<!--            <TextView-->
+<!--                android:id="@+id/textViewManagementParking"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="0dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:textSize="18sp"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColorHint="@color/black"-->
+<!--                android:hint="@string/parking_management"-->
+<!--                android:textAlignment="center"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toTopOf="parent" />-->
+
+
+            <LinearLayout
+                android:id="@+id/linearLayoutManagementParking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rect"
+                android:gravity="center"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textViewTotalVehicle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/total_vehicle"
+                    android:textAlignment="center"
+                    android:textColorHint="@color/black"
+                    android:textSize="16sp" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp" />
+
+                <TextView
+                    android:id="@+id/textViewTotalVehicleNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/circle_shape"
+                    android:hint="0"
+                    android:padding="30dp"
+                    android:textAlignment="center"
+                    android:textColorHint="@color/white"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutPaymentMethods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:orientation="vertical"
+                android:background="@drawable/rect_with_background"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutManagementParking">
+
+                <TextView
+                    android:id="@+id/textViewPaymentMethods"
+                    android:hint="@string/payment_methods"
+                    android:textAlignment="center"
+                    android:textSize="18sp"
+                    android:textColorHint="@color/black"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutContinuePaymentMethods"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-2dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:gravity="center"
+                android:background="@drawable/rect_without_background"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutPaymentMethods">
+
+                <!--Payment Methods-->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="start"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <!--Money-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/payment_money"
+                        android:textColorHint="@color/black"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="100dp"
+                        android:layout_height="5dp"/>
+
+                    <!--Credit-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/payment_credit"
+                        android:textColorHint="@color/black"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="100dp"
+                        android:layout_height="5dp"/>
+
+                    <!--Debit-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/payment_debit"
+                        android:textColorHint="@color/black"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="100dp"
+                        android:layout_height="5dp"/>
+
+                    <!--Ticket-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/payment_ticket"
+                        android:textColorHint="@color/black"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="100dp"
+                        android:layout_height="5dp"/>
+
+                    <!--Pix-->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/payment_pix"
+                        android:textColorHint="@color/black"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="60dp"
+                    android:layout_height="match_parent"/>
+
+                <!--Values-->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:textAlignment="textEnd"
+                    android:gravity="end"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <!--Money-->
+                    <TextView
+                        android:id="@+id/textViewMoney"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="0,00"
+                        android:textColor="@color/black"
+                        android:textAlignment="textEnd"
+                        android:textColorHint="@color/black"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="100dp"
+                        android:layout_height="5dp"/>
+
+                    <!--Credit-->
+                    <TextView
+                        android:id="@+id/textViewCredit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="0,00"
+                        android:textColor="@color/black"
+                        android:textAlignment="textEnd"
+                        android:textColorHint="@color/black"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="100dp"
+                        android:layout_height="5dp"/>
+
+                    <!--Debit-->
+                    <TextView
+                        android:id="@+id/textViewDebit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="0,00"
+                        android:textColor="@color/black"
+                        android:textAlignment="textEnd"
+                        android:textColorHint="@color/black"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="100dp"
+                        android:layout_height="5dp"/>
+
+                    <!--Ticket-->
+                    <TextView
+                        android:id="@+id/textViewTicket"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="0,00"
+                        android:textColor="@color/black"
+                        android:textAlignment="textEnd"
+                        android:textColorHint="@color/black"
+                        android:textSize="18sp" />
+
+                    <Space
+                        android:layout_width="100dp"
+                        android:layout_height="5dp"/>
+
+                    <!--Debit-->
+                    <TextView
+                        android:id="@+id/textViewPix"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:hint="0,00"
+                        android:textColor="@color/black"
+                        android:textAlignment="textEnd"
+                        android:textColorHint="@color/black"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/rect_blue"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayoutContinuePaymentMethods">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/total"
+                    android:textColorHint="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Space
+                    android:layout_width="10dp"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/textViewTotalG"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="0,00"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnVehicleEnter"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:backgroundTint="@color/green"
+                android:hint="@string/btn_vehicle_enter"
+                android:textColorHint="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+            <ProgressBar
+                android:id="@+id/progressBarManagement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</LinearLayout>
